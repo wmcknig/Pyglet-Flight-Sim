@@ -1,0 +1,21 @@
+from math import pi
+from plane_class import Plane
+
+plane = Plane(1, [0, 0], 0)
+plane2 = Plane(1, [1, 1], pi/2)
+print(plane.collisions)
+print(plane2.collisions)
+print(plane.current_collisions)
+print(plane2.current_collisions)
+plane.update_position()
+plane2.update_position()
+plane.record_collision(plane2)
+print(plane.collisions)
+print(plane.current_collisions)
+print(plane2.collisions)
+print(plane2.current_collisions)
+plane2.record_collision(plane)
+print(plane.collisions)
+print(plane.current_collisions)
+print(plane2.collisions)
+print(plane2.current_collisions)
